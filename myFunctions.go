@@ -21,7 +21,10 @@ func SwitchAllTypr(iV interface{}) {
 		fmt.Printf("what Unknown is %v\n", reflect.TypeOf(nameiV))
 	}
 }
-func ConnectMySQL(dsn string) *sql.DB {
+
+// 传入DSN
+// 返回连接
+func MySQL_Connect(dsn string) *sql.DB {
 	db, err := sql.Open("mysql", dsn) //不检验密码，用户名是否正确
 	if err != nil {
 		fmt.Printf("dsn 连接出错(格式有错)(用户名:密码@tcp(127.0.0.1:3306)/gotest)：%v , eer is %v\n", dsn, err)
