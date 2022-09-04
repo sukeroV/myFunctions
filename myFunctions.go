@@ -7,7 +7,7 @@ import (
 )
 
 func SwitchAllTypr(iV interface{}) {
-	// 这里的 v 是类型的值
+	// 这里的 v 是类型的值kkkkkk
 	switch nameiV := iV.(type) {
 	case bool:
 		fmt.Printf("bool\n")
