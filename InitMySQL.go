@@ -1,4 +1,4 @@
-package goandmysql
+package myFunctions
 
 import (
 	"database/sql"
