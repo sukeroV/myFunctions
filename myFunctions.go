@@ -2,10 +2,9 @@ package myFunctions
 
 import (
 	"fmt"
-	"reflect"
 )
 
-func SAllTypr(iV interface{}) {
+func SwitchAllTypr(iV interface{}) {
 	// 这里的 v 是类型的值
 	switch nameiV := iV.(type) {
 	case bool:
@@ -17,7 +16,6 @@ func SAllTypr(iV interface{}) {
 	case float32, float64:
 		fmt.Printf("float32 or 64\n")
 	default:
-
-		fmt.Printf("what Unknown is %v\n", reflect.TypeOf(nameiV))
+		fmt.Printf("what Unknown is %v\n", nameiV)
 	}
 }
