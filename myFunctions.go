@@ -2,6 +2,7 @@ package myFunctions
 
 import (
 	"fmt"
+	"reflect"
 )
 
 func SwitchAllTypr(iV interface{}) {
@@ -16,6 +17,6 @@ func SwitchAllTypr(iV interface{}) {
 	case float32, float64:
 		fmt.Printf("float32 or 64\n")
 	default:
-		fmt.Printf("what Unknown is %v\n", nameiV)
+		fmt.Printf("what Unknown is %v\n", reflect.TypeOf(nameiV))
 	}
 }
