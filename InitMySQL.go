@@ -3,8 +3,24 @@ package myFunctions
 import (
 	"database/sql"
 	"fmt"
+	"reflect"
 )
 
+func SwitchAllTypr(iV interface{}) {
+	// 这里的 v 是类型的值
+	switch nameiV := iV.(type) {
+	case bool:
+		fmt.Printf("bool\n")
+	case string:
+		fmt.Printf("string\n")
+	case int, int64:
+		fmt.Printf("int or int 64\n")
+	case float32, float64:
+		fmt.Printf("float32 or 64\n")
+	default:
+		fmt.Printf("what Unknown is %v\n", reflect.TypeOf(nameiV))
+	}
+}
 func ConnectMySQL(dsn string) *sql.DB {
 	db, err := sql.Open("mysql", dsn) //不检验密码，用户名是否正确
 	if err != nil {
